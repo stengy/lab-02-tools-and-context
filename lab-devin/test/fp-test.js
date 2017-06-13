@@ -29,4 +29,16 @@ describe('method tests', () => {
     });
   });
 
+  describe('reduce tests', () => {
+    it('should return 420', () => {
+      let result = functo.reduce([210,2], [(a,c) => a * c]);
+      expect(result).toEqual(420);
+    });
+
+    it('should return 1337', () => {
+      let result = functo.reduce([500,2], [(a,c) => a * c + 337]);
+      expect(result).toEqual(1337);
+    });
+  });
+
 });
