@@ -15,8 +15,18 @@ describe('method tests', () => {
       let result = functo.map([2,4,6], n => n / 2);
       expect(result).toEqual([1,2,3]);
     });
-
   });
 
+  describe('filter tests', () => {
+    it('should return [love]', () => {
+      let result = functo.filter(['sad','day','but','love'], n => n.length > 3);
+      expect(result).toEqual(['love']);
+    });
+
+    it('should return [45]', () => {
+      let result = functo.filter([23,45,454,4564,90,0], n => n > 30 && n < 50);
+      expect(result).toEqual([45]);
+    });
+  });
 
 });
