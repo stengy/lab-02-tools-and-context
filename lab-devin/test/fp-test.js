@@ -41,4 +41,16 @@ describe('method tests', () => {
     });
   });
 
+  describe('concat tests', () => {
+    it('should return [1,2,3,4,5,6]', () => {
+      let result = functo.concat([1,2,3], [4,5,6]);
+      expect(result).toEqual([1,2,3,4,5,6]);
+    });
+
+    it('should return ["happy", "go", "lucky"]', () => {
+      let result = functo.concat(['happy','go'], ['lucky']);
+      expect(result).toEqual(['happy', 'go', 'lucky']);
+    });
+  });
+
 });
