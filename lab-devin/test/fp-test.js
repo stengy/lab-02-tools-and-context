@@ -53,4 +53,16 @@ describe('method tests', () => {
     });
   });
 
+  describe('splice tests', () => {
+    it('should return [55,60]', () => {
+      let result = functo.splice([45,50,55,60], (0,2));
+      expect(result).toEqual([55,60]);
+    });
+
+    it('should return ["ducky"]', () => {
+      let result = functo.splice(['number', 'ducky'], (0,1));
+      expect(result).toEqual(['ducky']);
+    });
+  });
+
 });
